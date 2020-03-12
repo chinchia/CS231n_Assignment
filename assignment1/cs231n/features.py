@@ -93,7 +93,7 @@ def hog_feature(im):
     if im.ndim == 3:
         image = rgb2gray(im)
     else:
-        image = np.at_least_2d(im)
+        image = np.atleast_2d(im) # numpy.atleast_2d(): view inputs as arrays with at least two dimensions
 
     sx, sy = image.shape # image size
     orientations = 9 # number of gradient bins
